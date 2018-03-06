@@ -28,8 +28,9 @@ namespace agent
         }
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
         {
+            var url = "http://foo.bar:8080";
             // TODO: Insert monitoring activities here.  
-            WebRequest webRequest = WebRequest.Create("http://dev.sarifas.com:3000/update-node");
+            WebRequest webRequest = WebRequest.Create(requestUriString: url);
             WebResponse webResp = webRequest.GetResponse();
 
         }
